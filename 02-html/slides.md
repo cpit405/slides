@@ -59,10 +59,22 @@ layout: center
 
 ---
 
-# Code
+# HTML Headings
 
-<iframe width="100%" height="300" allowfullscreen="allowfullscreen" frameborder="0" 
-src="http://jsfiddle.net/ibmjs/4fttnv3t/embedded/result,js,html">
-<a href="http://jsfiddle.net/ibmjs/4fttnv3t/">checkout the sample on JSFiddle</a></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/kalharbi/vctjna20/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
+---
+# HTML Paragraphs
+<iframe width="100%" height="300" src="//jsfiddle.net/kalharbi/6ht4ubde/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
+---
+# HTML Links - Hyperlinks
+<iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/obq5eaLz/1/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+---
+
+# HTML Images
+<iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/w36u0eoz/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+---
+
+## HTML Tables
+<iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/scgjyadh/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
