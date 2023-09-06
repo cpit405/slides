@@ -1,6 +1,7 @@
 ---
 # try also 'default' to start simple
 theme: default
+title: 'Learning HTML'
 # apply any windi css classes to the current slide
 class: text-center
 # https://sli.dev/custom/highlighters.html
@@ -69,7 +70,7 @@ layout: center
 
 ---
 # HTML Links - Hyperlinks
-<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/kalharbi/embed/LYMbLOm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.Gio/kalharbi/embed/LYMbLOm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/kalharbi/pen/LYMbLOm">
   Untitled</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -80,7 +81,7 @@ layout: center
 <iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/w36u0eoz/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 ---
 
-## Lists: Unordered lists ```<ul>```
+## Lists: Unordered lists \<ul\>
 <iframe height="300" style="width: 100%;" scrolling="no" title="HTML Examples" src="https://codepen.io/kalharbi/embed/MWZbOPm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/kalharbi/pen/MWZbOPm">
   HTML Examples</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
@@ -89,7 +90,7 @@ layout: center
 
 ---
 
-## Lists: Ordered Lists ```<ol>```
+## Lists: Ordered Lists \<ol\>
 <iframe height="300" style="width: 100%;" scrolling="no" title="Ordered List Example" src="https://codepen.io/kalharbi/embed/XWoNzoz?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/kalharbi/pen/XWoNzoz">
   Ordered List Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
@@ -98,7 +99,50 @@ layout: center
 
 ---
 
-## HTML Tables
-<iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/scgjyadh/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+## Nesting a List
 
+- The `<ul>` and `<ol>` elements may be nested as deeply as desire.
 
+<iframe height="90%" style="width: 100%;" scrolling="no" title="Nesting a List Example" src="https://codepen.io/kalharbi/embed/dywOdYX?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/dywOdYX">
+  Nesting a List Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+---
+
+## Table
+
+<iframe height="90%" style="width: 100%;" scrolling="no" title="HTML Table Example" src="https://codepen.io/kalharbi/embed/jOXVZyQ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/jOXVZyQ">
+  HTML Table Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
+## HTML Table Colspan & Rowspan
+
+<iframe height="90%" style="width: 100%;" scrolling="no" title="HTML Table Colspan &amp; Rowspan Example" src="https://codepen.io/kalharbi/embed/KKbNQWb?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/KKbNQWb">
+  HTML Table Colspan &amp; Rowspan Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
+## HTML Form
+
+<iframe height="90%" style="width: 100%;" scrolling="no" title="HTML Form Example I" src="https://codepen.io/kalharbi/embed/ExGNQvj?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/ExGNQvj">
+  HTML Form Example I</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
+## HTML Form (Cont.)
+<iframe height="90%" style="width: 100%;" scrolling="no" title="HTML Form Example II" src="https://codepen.io/kalharbi/embed/QWzGQMJ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/QWzGQMJ">
+  HTML Form Example II</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
