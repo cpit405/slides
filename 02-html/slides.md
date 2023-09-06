@@ -69,12 +69,36 @@ layout: center
 
 ---
 # HTML Links - Hyperlinks
-<iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/obq5eaLz/1/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/kalharbi/embed/LYMbLOm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/LYMbLOm">
+  Untitled</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
 ---
 
-# HTML Images
+## HTML Images
 <iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/w36u0eoz/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+---
+
+## Lists: Unordered lists ```<ul>```
+<iframe height="300" style="width: 100%;" scrolling="no" title="HTML Examples" src="https://codepen.io/kalharbi/embed/MWZbOPm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/MWZbOPm">
+  HTML Examples</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
+## Lists: Ordered Lists ```<ol>```
+<iframe height="300" style="width: 100%;" scrolling="no" title="Ordered List Example" src="https://codepen.io/kalharbi/embed/XWoNzoz?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/XWoNzoz">
+  Ordered List Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 ---
 
 ## HTML Tables
 <iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/scgjyadh/embedded/html,css,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+
