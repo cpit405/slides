@@ -19,29 +19,36 @@ transition: slide-left
 # use UnoCSS
 css: unocss
 ---
----
-layout: center
----
+
 # HTML: HyperText Markup Language
+### CPIT-405
+### Fall 2023
+#### Khalid Alharbi, Ph.D.
 
 ---
 
 ## Introduction
+
 - HTML (HyperText Markup Language) is the most basic building block of the Web. 
-- It defines the meaning and structure of a web page.
+- HTML is a markup language, which means it uses tags to tell the browser how to display the content of a web page. 
+- The purpose of HTML is to describe the structure of a web page.
+  - HTML defines headings, paragraphs, lists, images, links and more elements that make up a web page
 
 ---
 
 ## History of HTML
-- Invented by Tim Berners-Lee in late 1991
+- Tim Berners-Lee, a British computer scientist, invents HTML at CERN, the European Organization for Nuclear Research.
 - Created "hypertext" to share scientific papers
+
 - HTML version timeline
-  - 1991- Tim Berners-Lee invents HTML 1.0
-  - 1993- HTML 1.0 is released. Not many developers are creating websites at this time.
-  - 1995- HTML 2.0 is published.
-  - 1997- HTML 3.0 was invented.
-  - 1999- HTML 4.0 was released.
-  - 2014- HTML 5.0 was released.
+  - 1989: Tim Berners-Lee invents HTML 1.0
+  - 1991: The first public description of HTML is released. 
+  - 1993: HTML 1.0 is released.
+  - 1995: HTML 2.0 is published.
+  - 1997: HTML 3.0 was invented.
+  - 1999: HTML 4.0 was released.
+  - 2014: HTML 5.0 was released.
+  - 2019: HTML 5.3 is released.
 - Standardized by W3C (World Wide Web Consortium)
 
 
