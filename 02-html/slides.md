@@ -21,35 +21,39 @@ css: unocss
 ---
 
 # HTML: HyperText Markup Language
-### CPIT-405
-### Fall 2023
-#### Khalid Alharbi, Ph.D.
+### CPIT-405 Web Applications
+
+
+<div class="absolute left-30px bottom-30px">
+Fall 2023 &copy; Khalid Alharbi, Ph.D.
+</div>
+
 
 ---
 
-## Introduction
+# Introduction
 
-- HTML (HyperText Markup Language) is the most basic building block of the Web. 
+- HTML (HyperText Markup Language) is the most basic building block of the web.
 - HTML is a markup language, which means it uses tags to tell the browser how to display the content of a web page. 
 - The purpose of HTML is to describe the structure of a web page.
   - HTML defines headings, paragraphs, lists, images, links and more elements that make up a web page
+- Standardized by World Wide Web Consortium (W3C)
+- W3C handed HTML over to a group of browser vendors known as  Web Hypertext Application Technology Working Group (WHATWG).
+  -  WHATWG is made up of the four major browser vendors: Apple, Google, Microsoft, and Mozilla.
+- The complete HTML specification is maintained by WHATWG at [https://html.spec.whatwg.org](https://html.spec.whatwg.org).
 
 ---
 
 ## History of HTML
-- Tim Berners-Lee, a British computer scientist, invents HTML at CERN, the European Organization for Nuclear Research.
-- Created "hypertext" to share scientific papers
-
+- HTML was invented by Tim Berners-Lee in late 1991 at CERN, the European Organization for Nuclear Research.
 - HTML version timeline
-  - 1989: Tim Berners-Lee invents HTML 1.0
   - 1991: The first public description of HTML is released. 
   - 1993: HTML 1.0 is released.
-  - 1995: HTML 2.0 is published.
-  - 1997: HTML 3.0 was invented.
-  - 1999: HTML 4.0 was released.
-  - 2014: HTML 5.0 was released.
-  - 2019: HTML 5.3 is released.
-- Standardized by W3C (World Wide Web Consortium)
+  - 1995: HTML 2.0 is released.
+  - 1997: HTML 3.0 is released.
+  - 1999: HTML 4.0 is released.
+  - 2000: XHTML 1.0 is released as a reformulation of HTML as an XML application.
+  - 2014: HTML 5.0 is released with better support for video, audio, and mobile devices.
 
 
 ---
@@ -67,15 +71,77 @@ css: unocss
 
 ---
 
-# HTML Headings
+## HTML
 
-<iframe width="100%" height="300" src="//jsfiddle.net/kalharbi/vctjna20/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CPIT-405</title>
+</head>
+<body>
+<h1>Web Applications</h1>
+<p>
+  This course introduces you to web development using HTML, CSS, Javascript, React, and PHP.
+</p>
+</body>
+</html>
+```
 
 ---
+
+<h2><code>DOCTYPE</code></h2>
+
+- In HTML the doctype is a required preamble at the top of HTML documents.
+- It's used to prevent the the browser from switching into so-called "quirks mode" when rendering a document.
+  - In the old days of the web and before W3C HTML standards,  HTML documents were typically written in two versions for two major browsers: Microsoft Internet Explorer and Netscape Navigator.
+  - Layout engines in web browsers support three modes: quirks mode, limited-quirks mode, and no-quirks mode.
+    -  In quirks mode, layout engines emulate behavior in Navigator 4 and Internet Explorer 5.
+    - In no-quirks mode, layout engines emulate the behavior described by the modern HTML and CSS specifications.
+    - In limited-quirks mode, there are only a very small number of quirks implemented.
+- To ensure that your HTML document uses full standards mode, make sure that your page has a DOCTYPE like `<!DOCTYPE html>`.
+
+---
+
+# The `<head>` element
+- The `<head>` element contains elements that won't get displayed in the web browser.
+- It contains metadata (data about the HTML document) using the `<meta>` element.
+  - Examples include character encoding, description, and viewport size.
+- The `<head>` element also contains information such as the page `<title>`, links to CSS, links to JS, and links to custom favicons.
+
+```html
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Khalid Alharbi" />
+    <meta name="description" content="This is CPIT 405 course website. 
+  This course introduces students to web development using HTML, CSS, Javascript, React, 
+  and PHP.
+  " />
+    <title>CPIT 405 - Learning HTML</title>
+</head>
+```
+
+---
+
+# HTML Headings `<h1>` to `<h6>`
+
+- Heading content defines the heading of a section 
+- The `<h1>` to `<h6>` HTML elements represent six levels of section headings. 
+  - `<h1>` is the highest section level and `<h6>` is the lowest.
+<iframe height="75%" style="width: 100%;" scrolling="no" title="HTML Heading Elements" src="https://codepen.io/kalharbi/embed/eYbvRyp?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/kalharbi/pen/eYbvRyp">
+  HTML Heading Elements</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+---
+
 # HTML Paragraphs
 <iframe width="100%" height="300" src="//jsfiddle.net/kalharbi/6ht4ubde/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ---
+
 # HTML Links - Hyperlinks
 <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.Gio/kalharbi/embed/LYMbLOm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/kalharbi/pen/LYMbLOm">
