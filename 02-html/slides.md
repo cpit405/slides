@@ -1,7 +1,8 @@
 ---
 # try also 'default' to start simple
 theme: default
-title: 'Learning HTML'
+title: 'HTML'
+titleTemplate: '%s - CPIT-405'
 # apply any windi css classes to the current slide
 class: text-center
 # https://sli.dev/custom/highlighters.html
@@ -18,6 +19,8 @@ drawings:
 transition: slide-left
 # use UnoCSS
 css: unocss
+# Make content selectable/copyable
+selectable: true
 ---
 
 # HTML: HyperText Markup Language
@@ -28,32 +31,82 @@ css: unocss
 Fall 2023 &copy; Khalid Alharbi, Ph.D.
 </div>
 
-
+---
+layout: center
+---
+## Table of Contents
+- Introduction to HTML
+- Brief history
+- Concept and syntax
+- Basic structure of an HTML document
+- The `<head>` element for Metadata
+- The `<body>` element
+- Common HTML elements
+- Hyperlinks
+- Form elements
+- HTML tables
+- Multimedia and embedding
+- Validating and debugging HTML
 ---
 
 # Introduction
-
 - HTML (HyperText Markup Language) is the most basic building block of the web.
-- HTML is a markup language, which means it uses tags to tell the browser how to display the content of a web page. 
+- HTML is a markup language, which means it uses tags `< >` to tell the browser how to display the content of a web page. 
 - The purpose of HTML is to describe the structure of a web page.
   - HTML defines headings, paragraphs, lists, images, links and more elements that make up a web page
 - Standardized by World Wide Web Consortium (W3C)
 - W3C handed HTML over to a group of browser vendors known as  Web Hypertext Application Technology Working Group (WHATWG).
-  -  WHATWG is made up of the four major browser vendors: Apple, Google, Microsoft, and Mozilla.
+  - WHATWG is made up of the four major browser vendors: Apple, Google, Microsoft, and Mozilla.
 - The complete HTML specification is maintained by WHATWG at [https://html.spec.whatwg.org](https://html.spec.whatwg.org).
 
 ---
 
-## History of HTML
+## History of HTML (I)
 - HTML was invented by Tim Berners-Lee in late 1991 at CERN, the European Organization for Nuclear Research.
-- HTML version timeline
+- HTML version timeline:
   - 1991: The first public description of HTML is released. 
   - 1993: HTML 1.0 is released.
+  - 1994: The World Wide Web Consortium (W3C) was founded and led by Tim Berners-Lee as the the main international standards organization for the World Wide Web.
   - 1995: HTML 2.0 is released.
   - 1997: HTML 3.0 is released.
+  - 1998: W3C had shifted priorities away from HTML and instead began working on an XML-based equivalent, called XHTML. 
+    - XHTML strictly enforce XML rules. If there was a syntax error, the page wouldn’t load properly.
   - 1999: HTML 4.0 is released.
-  - 2000: XHTML 1.0 is released as a reformulation of HTML as an XML application.
-  - 2014: HTML 5.0 is released with better support for video, audio, and mobile devices.
+
+---
+
+## History of HTML (II)
+- HTML version timeline (Cont.):
+    - 2000: XHTML 1.0 is released as a reformulation of HTML as an XML application.
+    - 2004: WHATWG was founded by individuals of Apple, the Mozilla Foundation, and Opera Software.
+    - 2008: HTML 5.0 first draft appeared with better support for video, audio, and mobile devices.
+    - 2012: W3C and WHATWG announced that WHATWG would maintain a living standard, while the W3C would continue with versions.
+    - 2014: HTML5 became a W3C recommendation.
+    - 2019: both WHATWG and W3C signed an agreement to collaborate on a single version of HTML going forward: ["Living Standard"](https://html.spec.whatwg.org/multipage/).
+- The W3C and WHATWG had different goals. WHATWG wanted to continue working on a Living Standard for HTML while W3C wanted to publish a finished implementation of HTML.
+- WHATWG had set up a solid process in which HTML features get early support by browsers before the details of a specification are fully worked out.
+
+---
+
+## History of HTML (III)
+- Interestingly, WHATWG existed due to the reason why W3C lost power over the HTML specs.
+- In 2004, W3C abandoned organizational efforts on HTML in favor of the the Semantic Web, also known as Web 3.0.
+  - Their efforts shifted to towards new standards that promote common data formats and exchange protocols on the Web such as XHMTL 2, RDF, OWL, etc.
+- WHATWG was formed in reaction to that, rewriting HTML completely from its W3C HTML 4.0 version to make it better for web 2.0 applications.
+- Now, that both groups came to an agreement, there will be no more versions of HTML. 
+- Although HTML is a mature language, HTML specs are constantly being proposed, discussed, updated and revised in a draft called ["the living standard"](https://html.spec.whatwg.org/multipage/).
+- W3C still controls a number of other important web technologies, including CSS, WebAssembly, and web performance.
+
+---
+layout: center
+---
+## Concepts and Syntax
+
+- The elements of HTML
+- The `<!DOCTYPE`> element
+- The `<head>` element
+- The `<body>` element
+
 
 
 ---
@@ -90,24 +143,28 @@ Fall 2023 &copy; Khalid Alharbi, Ph.D.
 
 ---
 
-<h2><code>DOCTYPE</code></h2>
+# The `!DOCTYPE` element
+```html
+<!DOCTYPE html>
+```
 
-- In HTML the doctype is a required preamble at the top of HTML documents.
-- It's used to prevent the the browser from switching into so-called "quirks mode" when rendering a document.
-  - In the old days of the web and before W3C HTML standards,  HTML documents were typically written in two versions for two major browsers: Microsoft Internet Explorer and Netscape Navigator.
-  - Layout engines in web browsers support three modes: quirks mode, limited-quirks mode, and no-quirks mode.
-    -  In quirks mode, layout engines emulate behavior in Navigator 4 and Internet Explorer 5.
-    - In no-quirks mode, layout engines emulate the behavior described by the modern HTML and CSS specifications.
-    - In limited-quirks mode, there are only a very small number of quirks implemented.
-- To ensure that your HTML document uses full standards mode, make sure that your page has a DOCTYPE like `<!DOCTYPE html>`.
+- In HTML the doctype is a required preamble at the top of HTML documents to prevent the browser from switching into the so-called "quirks mode" when rendering a document.
+- In the old days of the web and before W3C HTML standards,  HTML documents were typically written in two versions for two major browsers: Microsoft Internet Explorer and Netscape Navigator.
+- Layout engines in web browsers support three modes: quirks mode, limited-quirks mode, and no-quirks mode.
+  -  In **quirks mode**, layout engines emulate behavior in Navigator 4 and Internet Explorer 5.
+  - In **limited-quirks mode**, there are only a very small number of quirks implemented.
+  - In **no-quirks mode**, layout engines emulate the behavior described by the modern HTML and CSS specifications.
+    - The `<!DOCTYPE html>` tag is used to indicate that the HTML document uses the no-quirks mode.
 
 ---
 
 # The `<head>` element
 - The `<head>` element contains elements that won't get displayed in the web browser.
-- It contains metadata (data about the HTML document) using the `<meta>` element.
+- It contains the `<meta>` element for metadata (data about the HTML document).
   - Examples include character encoding, description, and viewport size.
-- The `<head>` element also contains information such as the page `<title>`, links to CSS, links to JS, and links to custom favicons.
+- It also contains other elements such as:
+  - `<title>` for the document's title.
+  - `<link>` for links to CSS, JS, and custom favicons.
 
 ```html
 <head>
@@ -115,12 +172,49 @@ Fall 2023 &copy; Khalid Alharbi, Ph.D.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Khalid Alharbi" />
     <meta name="description" content="This is CPIT 405 course website. 
-  This course introduces students to web development using HTML, CSS, Javascript, React, 
-  and PHP.
-  " />
+          This course introduces students to web development using HTML, CSS, 
+          Javascript, React, and PHP." />
     <title>CPIT 405 - Learning HTML</title>
 </head>
 ```
+
+---
+layout: two-cols-header
+---
+# The `<body>` element
+
+::left::
+- The `<body>` element represents the content of an HTML document. 
+- There can be only one `<body>` element in a document.
+- It has a number of attributes that can be used to control the appearance and behavior of the web page (e.g., `bgcolor` to set the document's background color).
+  - [Refer to the complete list of valid attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body#attributes)
+
+::right::
+
+
+```html {monaco}
+  <html lang="en">
+  <head>
+    <title>Document title</title>
+  </head>
+  <body>
+    <p>
+      The body contains all of the content 
+      that is displayed in the browser window.
+    </p>
+  </body>
+</html>
+```
+
+---
+layout: center
+---
+## Common HTML elements
+
+- Headings `<h1>` to `<h6>`
+- Paragraphs `<p>`
+
+
 
 ---
 
