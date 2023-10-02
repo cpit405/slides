@@ -19,9 +19,12 @@ drawings:
 transition: slide-left
 # use UnoCSS
 css: unocss
+# Make monaco available in the exported SPA
+monaco: true 
 # Make content selectable/copyable
 selectable: true
 ---
+
 
 # HTML: HyperText Markup Language
 ### CPIT-405 Web Applications
@@ -124,22 +127,11 @@ layout: center
 
 ---
 
-## HTML
+## HTML Document
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>CPIT-405</title>
-</head>
-<body>
-<h1>Web Applications</h1>
-<p>
-  This course introduces you to web development using HTML, CSS, Javascript, React, and PHP.
-</p>
-</body>
-</html>
-```
+<iframe src="http://jsbin.com/dozulok/1/embed?html,output" title="HTML document Example" height="80%" width="100%"></iframe> 
+
+- Save this as an HTML file (e.g., `index.html`) and open it up in your browser.
 
 ---
 
@@ -166,14 +158,14 @@ layout: center
   - `<title>` for the document's title.
   - `<link>` for links to CSS, JS, and custom favicons.
 
-```html
+```html {monaco}
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Khalid Alharbi" />
     <meta name="description" content="This is CPIT 405 course website. 
           This course introduces students to web development using HTML, CSS, 
           Javascript, React, and PHP." />
+    <link rel="icon"  type="image/vnd.microsoft.icon"  href="https://example.com/image.ico">
     <title>CPIT 405 - Learning HTML</title>
 </head>
 ```
@@ -186,13 +178,15 @@ layout: two-cols-header
 ::left::
 - The `<body>` element represents the content of an HTML document. 
 - There can be only one `<body>` element in a document.
-- It has a number of attributes that can be used to control the appearance and behavior of the web page (e.g., `bgcolor` to set the document's background color).
+- It has a number of attributes that can be used to control the appearance and behavior of the web page (e.g., `bgcolor` to set the document's background color). 
+  - However, it is best to avoid using style attributes in HTML and to use CSS instead.
   - [Refer to the complete list of valid attributes on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body#attributes)
 
 ::right::
 
 
 ```html {monaco}
+  <!DOCTYPE html>
   <html lang="en">
   <head>
     <title>Document title</title>
@@ -209,91 +203,128 @@ layout: two-cols-header
 ---
 layout: center
 ---
-## Common HTML elements
+# HTML elements
 
-- Headings `<h1>` to `<h6>`
-- Paragraphs `<p>`
-
-
+- Text content elements: `<h1>` through `<h6>`, `<p>`, `<strong>`, and `<em>`.
+- Inline elements: `<a>`, `<span>`, `<img>`, `<video>`, `<audio>`, and `<table>`
+- List elements: `<ul>`, `<ol>`, and `<dl>`.
+- Sectioning elements: `<header>`, `<main>`, `<nav>`, `<footer>`, `<section>`, `<article>`, `<aside>`, and `<section>`.
+- Form elements: `<form>`, `<label>`, `<input>`, `<select>`, `<textarea>`, and `<button>`.
 
 ---
 
-# HTML Headings `<h1>` to `<h6>`
+# HTML Headings `<h1>` through `<h6>`
 
 - Heading content defines the heading of a section 
 - The `<h1>` to `<h6>` HTML elements represent six levels of section headings. 
   - `<h1>` is the highest section level and `<h6>` is the lowest.
-<iframe height="75%" style="width: 100%;" scrolling="no" title="HTML Heading Elements" src="https://codepen.io/kalharbi/embed/eYbvRyp?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/kalharbi/pen/eYbvRyp">
-  HTML Heading Elements</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+
+<iframe src="http://jsbin.com/hamoray/5/embed?html,output" title="HTML document Example" height="50%" width="100%"></iframe> 
 
 ---
 
-# HTML Paragraphs
-<iframe width="100%" height="300" src="//jsfiddle.net/kalharbi/6ht4ubde/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+# Paragraphs `<p>`, `<strong>`, and `<em>`.
+- The `<p>` element represents a paragraph.
+- The `<strong>` element is used to add strong emphasis to text. It is typically displayed in bold.
+  - Screen readers will pronounce the words in `<strong>` with added stress.
+- The `<em>` element marks text that has stress emphasis. It is typically displayed in italic.
+  - Screen readers will pronounce the words in `<em>` with an emphasis, using verbal stress.
+- **NOTE**: These two tags should not be used to apply italic and bold styling. Instead, use the CSS `font-style` property for that purpose.
+
+<iframe src="http://jsbin.com/fezufab/7/edit?html,output" title="HTML document Example" height="50%" width="100%"></iframe> 
 
 ---
 
-# HTML Links - Hyperlinks
-<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.Gio/kalharbi/embed/LYMbLOm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/kalharbi/pen/LYMbLOm">
-  Untitled</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
----
+# `<a>` The anchor element for links 
+- The `<a>` element with its `href` attribute creates a hyperlink to a URL.
+- Links are not restricted to web pages and can include email addresses, files, phone number, JavaScript, and anything else with a URL.
+- The `target` attribute is used to indicate where to open the linked URL.
+  -  Examples: `target="_blank"` will open the link in a new tab.
 
-## HTML Images
-<iframe width="100%" height="100%" src="//jsfiddle.net/kalharbi/w36u0eoz/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
----
+```html {monaco}
+<a href="example.com" target="_blank">Go to example.com</a>
 
-## Lists: Unordered lists \<ul\>
-<iframe height="300" style="width: 100%;" scrolling="no" title="HTML Examples" src="https://codepen.io/kalharbi/embed/MWZbOPm?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/kalharbi/pen/MWZbOPm">
-  HTML Examples</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+<a href="example.com">Go to example.com</a>
 
----
+<a href="mailto:nowhere@example.com">Send email to nowhere</a>
 
-## Lists: Ordered Lists \<ol\>
-<iframe height="300" style="width: 100%;" scrolling="no" title="Ordered List Example" src="https://codepen.io/kalharbi/embed/XWoNzoz?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/kalharbi/pen/XWoNzoz">
-  Ordered List Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+<a href="tel:+9668008501520">Call FedEx Express now!</a>
+
+<a sms="sms:1411">To check your balance, text 1 to 1411</a>
+
+<a href="./file.pdf">Download PDF file</a>
+
+<a href="javascript:alert('An alert message!');">Show me an alert popup in JavaScript</a>
+```
 
 ---
 
-## Nesting a List
 
-- The `<ul>` and `<ol>` elements may be nested as deeply as desire.
+# `<a>` The anchor element and linking to an element in the same webpage
 
-<iframe height="90%" style="width: 100%;" scrolling="no" title="Nesting a List Example" src="https://codepen.io/kalharbi/embed/dywOdYX?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/kalharbi/pen/dywOdYX">
-  Nesting a List Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
----
+1. Add an `id` attribute to the header element (e.g., `<h2>`, `<h3>`, etc.) that you want to link to.
+2. Add an anchor `<a>` element with an `href` attribute that points to the header element with the corresponding id attribute.
 
-## Table
+```html
+<a href="#section-1">
+<h1 id="section-1">Section 1</h1>
+```
 
-<iframe height="90%" style="width: 100%;" scrolling="no" title="HTML Table Example" src="https://codepen.io/kalharbi/embed/jOXVZyQ?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/kalharbi/pen/jOXVZyQ">
-  HTML Table Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+### Demo
+<iframe class="jsfiddle" width="100%" height="40%" title="HTML internal links example" src="//jsfiddle.net/kalharbi/dqaf3p8h/embedded/html,result/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe> 
 
 ---
 
-## HTML Table Colspan & Rowspan
+# List elements: `<ul>` The unordered list element
+- The `<ul>` element represents an unordered list of items, typically rendered as a bulleted list.
+- It may contain a list item (`<li>` element) or another list nested as deeply as desired.
+### Demo
+<iframe src="http://jsbin.com/dutovaz/1/embed?html,output" title="HTML unordered list example" height="70%" width="100%"></iframe> 
 
-<iframe height="90%" style="width: 100%;" scrolling="no" title="HTML Table Colspan &amp; Rowspan Example" src="https://codepen.io/kalharbi/embed/KKbNQWb?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/kalharbi/pen/KKbNQWb">
-  HTML Table Colspan &amp; Rowspan Example</a> by Khalid Alharbi (<a href="https://codepen.io/kalharbi">@kalharbi</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+
+---
+
+# List elements: `<ol>` The ordered list element
+- The `<ol>` element represents an ordered list of items, typically rendered as a numbered list.
+- It may contain a list item (`<li>` element) or another list nested as deeply as desired.
+### Demo
+<iframe src="http://jsbin.com/cakedey/1/embed?html,output" title="HTML ordered list example" height="70%" width="100%"></iframe> 
+
+---
+
+# List elements: `<dl>` The description list element
+- The `<dl>` element represents a description list of items, typically rendered as a numbered list.
+- It contains a list of terms (using the `<dt>` element) and descriptions (using the `<dd>` element).
+- It may contain a list item (`<li>` element) or another list nested as deeply as desired.
+### Demo
+<iframe src="http://jsbin.com/tujoqil/1/embed?html,output" title="HTML description list example" height="70%" width="100%"></iframe>
+
+---
+
+## Multimedia elements: `<img>`, `<video>`, and `<audio>`
+- Multimedia on the web includes images (`<img>`), sound/music (`<audio>`), videos/movies (`<video>`).
+### Demo
+<iframe src="http://jsbin.com/hokupum/5/embed?html,output" title="HTML description list example" height="90%" width="100%"></iframe>
+
+---
+
+# Table element `<table>` (I) 
+- The `<table>` element represents tabular data comprised of rows (`<tr>` elements), columns of headers (`<th>` elements), and cells containing data (`<td>` elements).
+- It may contain a caption (`<caption>`) element that specifies the title of the table.
+
+### Demo
+
+<iframe src="http://jsbin.com/refisop/1/embed?html,output" title="HTML description list example" height="70%" width="100%"></iframe>
+
+---
+
+## Table element `<table>` (II): Table colspan and rowspan
+- The `colspan` attribute specifies the number of *columns* that a cell should span.
+- The `rowspan` attribute specifies the number of *rows* that a cell should span.
+### Demo
+
+<iframe src="http://jsbin.com/curoleg/1/edit?html,output
+/1/embed?html,output" title="HTML description list example" height="70%" width="100%"></iframe>
 
 ---
 
