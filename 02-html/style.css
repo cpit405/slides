@@ -1,3 +1,8 @@
+:not(pre)>code {
+	color: #444746;
+	background-color: #e9e8e8;
+}
+
 :not(pre)>code::before,
 :not(pre)>code::after {
 	content: "";
