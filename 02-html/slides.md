@@ -507,3 +507,4 @@ HTML elements can be grouped into two categories: block level and inline element
 - You can find many helpful tutorials and articles on the [MDN web documentation](https://developer.mozilla.org/en-US/docs/Web/HTML).
 
 - Coming up next: Use CSS to style your web pages! 🤩
+
