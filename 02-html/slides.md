@@ -23,6 +23,8 @@ css: unocss
 monaco: true 
 # Make content selectable/copyable
 selectable: true
+# Make slides downloadable as PDF
+download: true
 ---
 
 
