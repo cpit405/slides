@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "02-html/"
 permissions:
   contents: write
 jobs:
@@ -11,14 +13,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install and Build
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Get talk title
+        run: echo "TALK_TITLE=$(cat package.json | grep "name" | cut -d ':' -f 2 | cut -d '"' -f 2)" >> "$GITHUB_ENV"
+      - name: Install dependencies and build
         run: |
-          cd 02-html
           npm ci
-          npm run build --base=/slides/html/
+          npm run build build --base=/slides/${{env.talk_title}}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
+          folder: slides/${{env.talk_title}}/dist
+          target-folder: ${{env.talk_title}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
